@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/assets/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+    <title>Document</title>
+</head>
+<body>
+    <header>
+        <h1 class="bk_main_header"> Book Details</h1>
+    </header>
+    <main>
+        <!-- search functionality that allows users to filter books by title.  -->
+        <form action="/" class="search-container">
+            <i class="fa fa-search searchIcon" aria-hidden="true"></i>
+            <input type="text" id="search-input" placeholder="search for a movie...">
+        </form>
+        
+
+        <!--All book list render by js -->
+        <div id="book-list" class="book-grid"></div>
+    </main>
+
+    <script src="/assets/js/index.js"></script>
+</body>
+</html>

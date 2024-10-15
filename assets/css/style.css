@@ -1,0 +1,97 @@
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+header {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 1rem;
+}
+
+main {
+    padding: 2rem;
+}
+
+/* ---------- book listing desgin code start from here --------------- */
+
+.book-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 2rem;
+    padding-top: 40px;
+    padding-bottom: 140px;
+}
+
+.book-card {
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    /* height: 100%; */
+}
+
+.book-card .image-container {
+    width: 100%;
+    padding-top: 150%;
+    position: relative;
+    overflow: hidden;
+    margin-bottom: 1rem;
+}
+
+.book-card img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.book-card h2 {
+    font-size: 1.2rem;
+    margin: 0 0 0.5rem 0;
+}
+
+.book-card p {
+    margin: 0 0 0.5rem 0;
+    font-size: 0.9rem;
+}
+
+.book-card .genre {
+    font-style: italic;
+    color: #666;
+}
+
+.book-info {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+/* ------------ searchbar code start from here ----------- */
+.search-container{
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+#search-input {
+    width: 100%;
+    max-width: 500px;
+    padding: 1rem;
+    font-size: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding-left: 40px;
+}
+
+.searchIcon{
+    position: relative;
+    left: 36px;
+}
