@@ -17,6 +17,28 @@ main {
     padding: 2rem;
 }
 
+nav ul{
+    list-style-type: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline-block;
+    margin-right: 20px;
+}
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.page {
+    display: none;
+}
+
+.page.active {
+    display: block;
+}
+
 /* ---------- book listing desgin code start from here --------------- */
 
 .book-grid {
@@ -35,6 +57,7 @@ main {
     display: flex;
     flex-direction: column;
     /* height: 100%; */
+    position: relative;
 }
 
 .book-card .image-container {
@@ -75,10 +98,28 @@ main {
     flex-direction: column;
 }
 
-/* ------------ searchbar code start from here ----------- */
+/* ------------ searchbar and dropdown dilter code start from here ----------- */
 .search-container{
-    margin-bottom: 2rem;
     text-align: center;
+    flex-shrink: 0;
+    width: 100%;
+    max-width: 500px;
+    position: relative;
+}
+
+.filter-container{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#genre-select {
+    padding: 0.5rem 20px;
+    font-size: 1rem;
+    border: 1px solid rgba(0, 0, 0,0.2);
+    border-radius: 5px;
+    width: 30%;
+    max-width: 200px;
 }
 
 #search-input {
@@ -92,6 +133,70 @@ main {
 }
 
 .searchIcon{
-    position: relative;
-    left: 36px;
+    position: absolute;
+    left: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+
+/*------------------  wishlist part css start ----------------> */
+.wishlist-icon {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: #ccc;
+    transition: color 0.3s ease;
+    z-index: 999;
+}
+
+.wishlist-icon.wishlisted {
+    color: #ff4136;
+}
+
+/*-------------------------- pagination css start --------------->  */
+.pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2rem;
+}
+
+.pagination button {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    color: #333;
+    padding: 0.5rem 1rem;
+    margin: 0 0.25rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.pagination button:hover {
+    background-color: #f0f0f0;
+}
+
+.pagination button.active {
+    background-color: #333;
+    color: #fff;
+}
+
+.pagination button:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+/* book details css  */
+#book-details-page {
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    padding: 2rem;
+}
+
+#book-details-page img {
+    max-width: 300px;
+    margin-bottom: 1rem;
 }
